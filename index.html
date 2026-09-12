@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Game Note</title><link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="layout">
+<aside class="sidebar">
+  <div class="brand">GAME <span>NOTE</span></div>
+  <nav>
+    <button class="nav active" data-view="games">⌂ <span>Games</span></button>
+    <button class="nav" data-view="notes">▤ <span>Notes</span></button>
+    <button class="nav" data-view="goals">✓ <span>Goals</span></button>
+  </nav>
+  <div class="side-bottom">Personal game hub<br><small>Data stays in this browser.</small></div>
+</aside>
+<main>
+<header>
+  <div><div class="eyebrow">PERSONAL GAME HUB</div><h1 id="title">My Games</h1></div>
+  <div class="header-actions"><button class="ghost" id="importBtn">Import</button><button class="ghost" id="exportBtn">Export</button><button class="primary" id="addGameBtn">+ Add game</button><input type="file" id="fileInput" accept=".json" hidden></div>
+</header>
+<div class="search"><span>⌕</span><input id="search" placeholder="Search games, notes, goals..."></div>
+<section id="content"></section>
+</main>
+</div>
+
+<div class="modal" id="modal"><div class="modal-card">
+  <button class="close" id="closeModal">×</button><h2 id="modalTitle">Add game</h2>
+  <label>Game name<input id="gameName" placeholder="Roblox"></label>
+  <label>Short tag<input id="gameTag" maxlength="4" placeholder="RBX"></label>
+  <div class="modal-actions"><button class="ghost" id="cancelBtn">Cancel</button><button class="primary" id="saveGameBtn">Save</button></div>
+</div></div>
+
+<div class="toast" id="toast"></div>
+<script src="script.js"></script>
+</body></html>
